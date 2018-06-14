@@ -3,8 +3,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { MaterialModule } from './shared/material.module';
-import { FormsModule } from '@angular/forms';
+import { Routes, RouterModule } from '@angular/router';
+
+const routes: Routes = [
+  { path: 'playground', loadChildren: './playground/playground.module#PlaygroundModule' },
+  { path: '**', redirectTo: 'playground' }
+];
 
 @NgModule({
   declarations: [
@@ -13,8 +17,7 @@ import { FormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    MaterialModule, 
-    FormsModule
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]
