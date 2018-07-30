@@ -8,6 +8,7 @@ import { FormsModule } from '@angular/forms';
 import { PlaygroundRoutingModule } from './playground-routing.module';
 import { ButtonsComponent } from './buttons/buttons.component';
 import { FlexComponent } from './flex/flex.component';
+import { ToolbarComponent } from './toolbar/toolbar';
 
 @NgModule({
   imports: [
@@ -17,6 +18,6 @@ import { FlexComponent } from './flex/flex.component';
     FormsModule,
     PlaygroundRoutingModule
   ],
-  declarations: [ButtonsComponent, FlexComponent]
+  declarations: [ButtonsComponent, FlexComponent, ToolbarComponent]
 })
 export class PlaygroundModule { }
